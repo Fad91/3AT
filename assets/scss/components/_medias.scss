@@ -1,0 +1,148 @@
+@media screen and (max-width: 1320px) {
+    .feedbacks-block {
+        width: 95%;
+    }
+    .swiper {
+        max-width: 970px;
+    }
+    .feedbacks-swiper__wrapper .swiper-item {
+        width: 300px !important;
+    }
+
+    .swiper-pagination {
+        display: block !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .swiper {
+        max-width: 610px;
+    }
+    .offers-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header {
+        justify-content: center;
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .common-wrap {
+        &--overflow {
+            max-width: 540px;
+        }
+    }
+    .detail {
+        padding: 25px 10px;
+
+        &--img {
+            padding: 25px 0;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        &--footer {
+            & button {
+                width: 100px;
+                padding: 10px 5px;
+                font-size: 14px;
+            }
+        }
+
+        & .text--bold {
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .swiper {
+        max-width: 300px;
+    }
+    .question-item__content {
+        font-size: 16px;
+    }
+    
+    .burger-menu {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+        &__separator {
+            display: none;
+        }
+
+        &__links {
+            flex-direction: column;
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    .search-block {
+        max-width: 210px;
+    }
+
+    .intro-block {
+        width: 95%;
+        margin: 0 auto;
+
+        &__title {
+            font-size: 46px;
+        }
+    }
+
+    .questions-block {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .feedbacks-block {
+        &__title {
+            font-size: 24px;
+        }
+    }
+
+    .offer {
+        &__container {
+            padding: 30px 15px;
+        }
+        &__label {
+            & .bold {
+                font-size: 26px;
+            }
+            & .regular {
+                font-size: 12px; 
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .common-wrap {
+        &--overflow {
+            max-width: 320px;
+        }
+    } 
+}
