@@ -21,14 +21,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.svg$/,
-        exclude: path.resolve(__dirname, './assets/img/icons/'),
-        type: 'asset/resource',
-        generator: {
-          filename: 'img/[name][ext]', // Копирование остальных SVG
-        },
-      },
-      {
         test: /\.scss$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -44,7 +36,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|ico)$/i,
+        test: /\.(png|jpg|svg|jpeg|gif|ico)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext]',
@@ -72,7 +64,7 @@ module.exports = {
           from: 'assets', 
           to: '.',
           globOptions: {
-            ignore: ['**/scss/**', '**/js/**'],
+            ignore: ['**/scss/**', '**/js/**', '**/img/**',],
           },
         },
       ],
