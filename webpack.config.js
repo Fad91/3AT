@@ -34,12 +34,13 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
         ],
-      },
+      },      
       {
-        test: /\.(png|jpg|svg|jpeg|gif|ico)$/i,
+        test: /\.(png|jpg|jpeg|gif|ico)$/i,
+        exclude: path.resolve(__dirname, '/img/**/'),
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name][ext]',
+          filename: 'img/**/[name][ext]',
         },
       },
       {
@@ -64,7 +65,7 @@ module.exports = {
           from: 'assets', 
           to: '.',
           globOptions: {
-            ignore: ['**/scss/**', '**/js/**', '**/img/**',],
+            ignore: ['**/scss/**', '**/js/**',],
           },
         },
       ],
@@ -77,3 +78,5 @@ module.exports = {
     ],
   },
 };
+
+// тут есть баг в конфиге, который svg-файлы еще билдит, не смог пока найти, в чем проблема, т.к первая сборка на webpack
